@@ -63,7 +63,7 @@ CONCAT (ROUND(population/((SELECT population FROM world WHERE name = 'Germany')*
 
 SELECT name 
   FROM world
- WHERE gdp > (SELECT MAX(gdp) FROM world WHERE continent = 'Europe')
+ WHERE gdp > (SELECT MAX(gdp) FROM world WHERE continent = 'Europe');
 
 /*
 7. Find the largest country (by area) in each continent, show the continent, the name and the area:
@@ -75,5 +75,5 @@ SELECT continent, name, area
        (SELECT area 
           FROM world y
          WHERE y.continent=x.continent
-           AND area>0)
+           AND area>0);
 
